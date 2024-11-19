@@ -5,40 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Birthday!</title>
     <style>
+        /* General Styles */
         body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(120deg, #ffe4e1, #ffb6c1);
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            background: url('birthday-bg.jpg') center/cover no-repeat, linear-gradient(120deg, #ffe4e1, #ffb6c1);
             color: #333;
             text-align: center;
-            padding: 50px;
+            padding: 20px;
         }
 
         .container {
-            max-width: 600px;
+            max-width: 500px;
             margin: auto;
-            background: #fff;
+            background: rgba(255, 255, 255, 0.9);
             border-radius: 15px;
             padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1s ease-in-out;
         }
 
         h1 {
             font-size: 2.5em;
-            color: #ff1493;
+            color: #ff69b4;
+            text-shadow: 2px 2px 5px rgba(255, 105, 180, 0.8);
+            animation: bounce 1.5s infinite alternate;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
         }
 
         button {
-            padding: 10px 20px;
+            padding: 15px 25px;
             background-color: #ff69b4;
             color: white;
             border: none;
-            border-radius: 5px;
+            border-radius: 50px;
             font-size: 1.2em;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            box-shadow: 0 5px 10px rgba(255, 105, 180, 0.5);
+            transition: all 0.3s ease;
         }
 
         button:hover {
+            transform: scale(1.1);
             background-color: #ff1493;
         }
 
@@ -48,20 +59,73 @@
 
         .surprise-content {
             margin-top: 20px;
+            animation: popIn 0.8s ease-in-out;
         }
 
         img {
             width: 100%;
-            max-width: 250px;
+            max-width: 200px;
             margin: 10px;
-            border-radius: 10px;
+            border-radius: 15px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
         }
 
         .message {
-            font-size: 1.5em;
+            font-size: 1.8em;
             color: #ff69b4;
             margin-top: 20px;
             font-weight: bold;
+            text-shadow: 2px 2px 5px rgba(255, 105, 180, 0.8);
+        }
+
+        /* Mobile-Friendly Adjustments */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+
+            button {
+                padding: 10px 20px;
+                font-size: 1em;
+            }
+
+            img {
+                max-width: 150px;
+            }
+        }
+
+        /* Animations */
+        @keyframes bounce {
+            from {
+                transform: translateY(0);
+            }
+            to {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes popIn {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
         }
     </style>
 </head>
@@ -73,8 +137,8 @@
         <div id="surprise" class="hidden">
             <div class="surprise-content">
                 <img src="birthday-surprise1.jpg" alt="Surprise Image 1">
-                <img src="birthday-surprise3.jpg" alt="Surprise Image 2">
-                <img src="birthday-suprise2.jpg" alt="Surprise Image 3">
+                <img src="birthday-surprise2.jpg" alt="Surprise Image 2">
+                <img src="birthday-surprise3.jpg" alt="Surprise Image 3">
                 <div class="message">We Love You! ❤️</div>
             </div>
         </div>
