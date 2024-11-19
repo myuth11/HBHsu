@@ -46,21 +46,37 @@
             display: none;
         }
 
+        .surprise-content {
+            margin-top: 20px;
+        }
+
         img {
             width: 100%;
-            max-width: 400px;
-            margin-top: 20px;
+            max-width: 250px;
+            margin: 10px;
             border-radius: 10px;
+        }
+
+        .message {
+            font-size: 1.5em;
+            color: #ff69b4;
+            margin-top: 20px;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>🎉 Happy Birthday, Hsu Lae! 🎂</h1>
-        <p>Wishing you a fantastic year ahead filled with joy, love, and laughter! Thanks for always being there</p>
+        <h1>🎉 Happy Birthday, [Name]! 🎂</h1>
+        <p>Wishing you a fantastic year ahead filled with joy, love, and laughter!</p>
         <button id="surpriseButton">Click for a Surprise! 🎁</button>
         <div id="surprise" class="hidden">
-            <img src="birthday-surprise.jpg" alt="Happy Birthday!">
+            <div class="surprise-content">
+                <img src="birthday-surprise1.jpg" alt="Surprise Image 1">
+                <img src="birthday-surprise3.jpg" alt="Surprise Image 2">
+                <img src="birthday-suprise2.jpg" alt="Surprise Image 3">
+                <div class="message">We Love You! ❤️</div>
+            </div>
         </div>
     </div>
     <script>
